@@ -9,3 +9,14 @@
 7. Как называется модуль подключения к host на windows?
 8. Приведите полный текст команды для поиска информации в документации ansible для модуля подключений ssh
 9. Какой параметр из модуля подключения `ssh` необходим для того, чтобы определить пользователя, под которым необходимо совершать подключение?
+
+## Ответ:
+1. `../group_vars/all/` ;
+1. `ansible-playbook -i inventory/test.yml site.yml` ;
+1. `ansible-vault encrypt <файл>` ;
+1. `ansible-vault decrypt <файл>` ;
+1. `ansible-vault view <файл>` ;
+1. Добавляется ключ `--ask-vault-pass` ;
+1. `ansible_connection=winrm` ;
+1. Список модулей - `ansible-doc -t connection -l`, описание модуля `ansible-doc -t connection ssh` ;
+1. Параметр `- remote_user` .
